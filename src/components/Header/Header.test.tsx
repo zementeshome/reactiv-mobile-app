@@ -1,9 +1,5 @@
-/**
- * @jest-environment jsdom
- */
-
 import { render, screen } from "@testing-library/react";
-import { test, describe, expect } from "@jest/globals";
+import { test, describe, expect } from "vitest";
 import Header from "./Header";
 
 describe("Header Component", () => {

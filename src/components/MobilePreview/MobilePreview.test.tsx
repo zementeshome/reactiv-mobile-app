@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 import { render, screen } from "@testing-library/react";
 import { test, describe, expect, vi } from "vitest";
 import MobilePreview from "./MobilePreview";
@@ -59,7 +59,7 @@ describe("MobilePreview", () => {
     expect(preventDefaultSpy).toHaveBeenCalled();
   });
 
-  test("prevents outer window scrolling when hitting the top scroll boundary", () => {
+  test("prevents outer window scrolling when hitting the top of scroll", () => {
     render(
       <MobilePreview>
         <div>Content</div>
@@ -82,7 +82,7 @@ describe("MobilePreview", () => {
     expect(preventDefaultSpy).toHaveBeenCalled();
   });
 
-  test("prevents outer window scrolling when hitting the bottom scroll boundary", () => {
+  test("prevents outer window scrolling when hitting the bottom of scroll", () => {
     render(
       <MobilePreview>
         <div>Content</div>

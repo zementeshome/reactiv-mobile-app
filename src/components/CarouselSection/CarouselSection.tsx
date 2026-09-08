@@ -28,7 +28,6 @@ const ReactivCarousel = (props: ReactivCarouselProps) => {
   };
 
   // Clamp the index whenever images shrink after adding more or deleting
-
   useEffect(() => {
     setCurrentIndex((i) => Math.min(i, Math.max(images.length - 1, 0)));
   }, [images.length]);
@@ -71,7 +70,7 @@ const ReactivCarousel = (props: ReactivCarouselProps) => {
     onChange({ ...config, display: newDisplay });
   };
 
-  // Image display settings
+  // Image orientation settings
   const displaySettings: Record<Display, string> = {
     portrait: "aspect-[3/4]",
     landscape: "aspect-[16/9]",

@@ -1,6 +1,5 @@
-import * as React from "react";
 import Home from "./pages/Home/Home";
-import { PreviewProvider } from "./Contexts/HomeContext";
+import { PreviewProvider } from "./contexts/HomeContext";
 
 export default function App() {
   return (

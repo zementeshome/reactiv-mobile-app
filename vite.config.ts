@@ -3,7 +3,6 @@ import { defineConfig } from "vitest/config";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
-// https://vite.dev
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {

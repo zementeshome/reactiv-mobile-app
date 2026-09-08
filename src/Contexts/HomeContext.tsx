@@ -1,5 +1,4 @@
-// context/PreviewContext.tsx
-import React, {
+import {
   createContext,
   useContext,
   useState,
@@ -16,7 +15,7 @@ import type {
   HomeConfig,
 } from "../components/CarouselSection/CarouselSection.types";
 
-const STORAGE_KEY = "preview-screen-config";
+const STORAGE_KEY = "mobile-preview-screen-config";
 
 const defaultConfigs: Record<SectionType, SectionConfig> = {
   carousel: { images: [], display: "square" } as CarouselConfig,
@@ -45,7 +44,7 @@ export const PreviewProvider = ({ children }: { children: ReactNode }) => {
         return parsed.sections ?? [];
       }
     } catch {
-      // Corrupt or missing data — fall back to empty
+      // Corrupt or missing data — fall back to empty array
     }
     return [];
   });

@@ -17,7 +17,7 @@ export const urlChecker = (url: string) => {
   try {
     const parsedUrl = new URL(urlToParse);
 
-    // Ensure it has a valid hostname (e.g., stops "https://" from being valid)
+    // Ensure it has a valid hostname
     return parsedUrl.hostname.includes(".");
   } catch {
     return false;

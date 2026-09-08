@@ -1,6 +1,6 @@
 export type Image = {
   url: string;
-  alt?: string;
+  alt: string;
   fallbackUrl?: string;
 };
 
@@ -36,8 +36,7 @@ export type Section<T extends SectionConfig = SectionConfig> = {
   config: T;
 };
 
-// JSON for exporting/importing
-
+//exporting/importing
 export type HomeConfig = {
   version: 1;
   sections: Section[];

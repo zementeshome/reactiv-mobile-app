@@ -39,6 +39,7 @@ const CTASection = ({ config, onChange }: CTASectionProps) => {
         placeholder="Button text"
         value={label}
         onChange={(e) => onChange({ ...config, label: e.target.value })}
+        key={crypto.randomUUID()}
       />
       <Input
         placeholder="Link URL"
@@ -46,6 +47,7 @@ const CTASection = ({ config, onChange }: CTASectionProps) => {
         onChange={(e) => onChange({ ...config, href: e.target.value })}
         type="url"
         className={!urlChecker(href) ? "border-2 border-red-800 p-4" : ""}
+        key={crypto.randomUUID()}
       />
       <div className="flex items-center gap-1.5 text-xs text-destructive font-medium">
         {!urlChecker(href) ? (
