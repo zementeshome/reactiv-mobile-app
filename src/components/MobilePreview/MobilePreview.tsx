@@ -13,7 +13,6 @@ const MobilePreview = ({ children }: MobilePreviewProps) => {
     if (!container) return;
 
     // wheel events inside the mobile preview
-
     const handleWheel = (e: WheelEvent) => {
       const { scrollTop, scrollHeight, clientHeight } = container;
 

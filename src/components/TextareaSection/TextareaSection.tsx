@@ -1,4 +1,3 @@
-import { Button } from "../../shadcn-ui-components/button";
 import { Input } from "../../shadcn-ui-components/input";
 import { Textarea } from "../../shadcn-ui-components/textarea";
 import type { TextArea } from "../CarouselSection/CarouselSection.types";
