@@ -20,7 +20,11 @@ const SelectDropdown = ({ value, onChange }: SelectDropdownProps) => {
       onValueChange={(value: Display) => onChange(value)}
       data-testid="select"
     >
-      <SelectTrigger className="w-[11.25rem" data-testid="select-trigger">
+      <SelectTrigger
+        className="w-[11.25rem]"
+        data-testid="select-trigger"
+        aria-label="image-orientation-dropdown"
+      >
         <SelectValue
           placeholder="Select a display"
           data-testid="select-value"

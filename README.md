@@ -1,19 +1,52 @@
-# React + Vite
+# Reactiv Home Screen Editor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React web application that lets users preview and modify an example mobile app
+home screen in real time, with the ability to configure three elements: a carousel, a text section and CTA section.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Clone this repository to your local machine:
 
-## React Compiler
+```bash
+git clone https://github.com/zementeshome/reactiv-mobile-app.git
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Navigate into the project directory:
 
-## Expanding the ESLint configuration
+```bash
+cd my-app
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Run the app
+
+```bash
+npm run dev
+```
+
+5. Default browser should automatically open the app at
+
+```url
+http://localhost:5173/
+```
+
+### Approach
+
+I found some mockups online so that I could visually map out the layout of the app. Once I did that I wrote down my features and what components I would need to build them. I used shadcn/ui and radix ui for the component library because they're accessible and easily customizable.
+
+Next I thought about how to manage state. I made everything lives in one Context - add/edit/delete/reorder to make it easier to digest and convinient for the export/import JSON requirement.
+
+Lastly I focused on CSS, making sure the app is easy to use, intuitive, responsive and accessible. Component libraries sometimes have dependencies that are buddy (e.g. the carousel), so a lot of time was focused on trying to fix those bugs. Instead of wasting anymore time on that I decided it would be best to just building a dependency free carousel.
+
+## Built With
+
+- [React](https://react.dev/) - Frontend library
+- [Vite](https://vite.dev) - Build tool and development server
 
 ## Requirements
 

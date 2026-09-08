@@ -7,7 +7,11 @@ export type HeaderProps = {
 const Header = ({ header }: HeaderProps) => {
   return (
     <>
-      <h1 className="font-mono font-bold text-xl mb-1" data-testid="header">
+      <h1
+        className="font-mono font-bold text-xl mb-1"
+        data-testid="header"
+        role="banner"
+      >
         {header}
       </h1>
     </>

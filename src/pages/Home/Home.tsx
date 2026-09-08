@@ -87,12 +87,14 @@ const Home = () => {
   return (
     <>
       <div
-        className="flex flex-col items-center gap-6 mt-4 w-max m-auto w-full"
+        className="flex flex-col items-center gap-4 mt-4 w-max m-auto w-full"
         data-testid="homepage"
       >
+        <Header header="Home Screen Editor" />
         <nav
           data-testid="homepage-nav"
-          className="flex flex-wrap justify-center"
+          className="flex flex-wrap justify-center mb-[1rem]"
+          role="navigation"
         >
           <ul className="sm:flex sm:mt-2">
             <li>
@@ -119,7 +121,7 @@ const Home = () => {
           </ul>
         </nav>
         <div
-          className="flex gap-2 items-center"
+          className="flex gap-4 items-center mb-[1rem]"
           data-testid="import-export-section"
         >
           <Button
@@ -149,7 +151,6 @@ const Home = () => {
         )}
         <MobilePreview>
           <div className="flex flex-col gap-4 w-full max-w-xs mt-2 sm:max-w-md">
-            <Header header="Home Screen Editor" />
             {sections.map((section, index) => (
               <div
                 key={section.id}

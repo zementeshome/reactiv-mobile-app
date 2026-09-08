@@ -97,7 +97,7 @@ const ReactivCarousel = (props: ReactivCarouselProps) => {
                   >
                     {images.map((image, index) => (
                       <div
-                        key={image.url}
+                        key={crypto.randomUUID()}
                         className={cn("w-full shrink-0", className)}
                         data-testid="carousel-item"
                       >
@@ -126,7 +126,7 @@ const ReactivCarousel = (props: ReactivCarouselProps) => {
                           type="button"
                           aria-label="delete"
                           size="sm"
-                          className="bg-red-200 text-red-600 hover:bg-red-300 border border-red-600 mb-3 mt-2 text-[0.625rem] h-[1rem]"
+                          className="bg-red-200 text-red-950 hover:bg-red-300 border border-red-600 mb-3 mt-2 text-[0.625rem] h-[1rem]"
                           onClick={() => handleDeleteImage(index)}
                           data-testid="image-delete-button"
                         >
